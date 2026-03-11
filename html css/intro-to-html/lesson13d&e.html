@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .outer-container {
+        border-width: 1px;
+        border-color: rgb(235, 233, 233);
+        border-style: solid;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15);
+        width: 500px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      .main-container {
+        margin-top: 10px;
+      }
+      .inner-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        border-radius: 20px;
+        margin-right: 15px;
+      }
+      .info-container {
+        flex: 1;
+        flex-shrink: 0;
+      }
+      .name-time-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+      p {
+        margin-top: 2px;
+        margin-bottom: 0px;
+        color: grey;
+        font-size: 17px;
+        font-family: arial;
+      }
+      .black-heading {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer-container">
+      <p><strong>INBOXES</strong></p>
+      <div class="main-container">
+        <div class="inner-container">
+          <img src="cat-pic.webp" />
+          <div class="info-container">
+            <div class="name-time-container">
+              <p><strong class="black-heading">Chewy Promotions</strong></p>
+              <p>4:58 PM</p>
+            </div>
+            <p>
+              <strong class="black-heading">Biggest series of the year!</strong>
+            </p>
+            <p>Hey there! We're writing to tell you about our...</p>
+          </div>
+        </div>
+      </div>
+      <div class="main-container">
+        <div class="inner-container">
+          <img src="cat-image2.webp" />
+          <div class="info-container">
+            <div class="name-time-container">
+              <p><strong class="black-heading">Chewy Promotions</strong></p>
+              <p>6:58 PM</p>
+            </div>
+            <p>
+              <strong class="black-heading">Biggest series of the year!</strong>
+            </p>
+            <p>Hey there! We're writing to tell you about our...</p>
+          </div>
+        </div>
+      </div>
+      <div class="main-container">
+        <div class="inner-container">
+          <img src="cat-image3.webp" />
+          <div class="info-container">
+            <div class="name-time-container">
+              <p><strong class="black-heading">Chewy Promotions</strong></p>
+              <p>9:58 PM</p>
+            </div>
+            <p>
+              <strong class="black-heading">Biggest series of the year!</strong>
+            </p>
+            <p>Hey there! We're writing to tell you about our...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

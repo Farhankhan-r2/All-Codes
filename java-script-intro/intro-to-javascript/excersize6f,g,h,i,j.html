@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <main></main>
+  </body>
+  <script>
+    const randomNumber = Math.random();
+    const guess = "heads";
+
+    /*
+  
+     mistake is that instead of using console.log() you should just direclt have use strings 
+
+    const result =
+      randomNumber > 0.5
+        ? (coinSide = "head") && console.log("head")
+        : (coinSide = "tails") && console.log("tails");
+    const conclusion =
+      coinSide === guess ? console.log("YOU WIN") : console.log("YOU LOSE");
+
+  */
+
+    // SOLUTION
+    // MORE CLEANER WAY ..... 6h & 6j. Use ternary to save 'heads' or 'tails' into 'result'
+    // If random > 0.5, result is 'heads', otherwise 'tails'
+    const result = randomNumber > 0.5 ? "heads" : "tails";
+
+    // Log the coin flip result (Requirement 6g)
+    console.log(result);
+
+    // 6i & 6j. Compare guess to result using ternary
+    const conclusion = guess === result ? "YOU WIN!" : "YOU LOSE!";
+    console.log(conclusion);
+  </script>
+</html>

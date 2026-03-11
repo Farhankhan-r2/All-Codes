@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <script>
+    //12a 
+    let add = () => {
+      console.log(2 + 3);
+    };
+    add();
+    add();
+
+    //12b
+
+    function runTwice(funct) {
+      for (let i = 0; i < 2; i++) {
+        console.log(funct);
+      };
+
+    };
+    runTwice(() => { add() });
+  </script>
+
+</body>
+
+</html>

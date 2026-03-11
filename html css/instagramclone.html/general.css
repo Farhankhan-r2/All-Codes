@@ -1,0 +1,12 @@
+body {
+  background-color: rgb(27, 27, 27);
+  padding-left: 330px;
+  font-family: roboto;
+}
+p {
+  color: white;
+  margin: 0;
+}
+div {
+  color: white;
+}

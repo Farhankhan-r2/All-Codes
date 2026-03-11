@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <script>
+    function removeEgg(array1) {
+      let newArray = [];
+      let appearanceNum = 0;
+
+      let reverseArray = (array1.slice()).reverse();
+      for (let i = 0; i < array1.length; i++) {
+        if (reverseArray[i] === 'egg') {
+          appearanceNum += 1;
+          if (appearanceNum <= 2) {
+            continue;
+
+          }
+        }
+        newArray.push(reverseArray[i]);
+      }
+      console.log(newArray.reverse());
+    }
+    removeEgg(['egg', 'apple', 'egg', 'egg', 'hm']);
+
+
+  </script>
+</body>
+
+</html>

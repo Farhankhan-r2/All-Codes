@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <button onclick="showCartQuantity()">Show Quantity</button>
+  <button onclick="updateCartQuantity(+1); showCartQuantity();">Add to cart</button>
+  <button onclick="updateCartQuantity(+2); showCartQuantity();">+2</button>
+  <button onclick="updateCartQuantity(+3); showCartQuantity();">+3</button>
+  <button onclick="updateCartQuantity(+4); showCartQuantity();">+4</button>
+  <button onclick="updateCartQuantity(-1); showCartQuantity();">Remove from cart</button>
+  <button onclick="updateCartQuantity(-2); showCartQuantity();">-2</button>
+  <button onclick="updateCartQuantity(-3); showCartQuantity();">-3</button>
+  <button onclick="cartQuantity = 0; showCartQuantity();">Reset cart</button>
+  <p></p>
+
+  <script>
+
+    let cartQuantity = 0;
+
+    function updateCartQuantity(number) {
+      cartQuantity += number;
+    }
+    function showCartQuantity() {
+      document.querySelector('p').innerText = `Cart quantity: ${cartQuantity}`;
+    }
+  </script>
+
+
+</body>
+
+</html>

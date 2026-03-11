@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <button
+      onclick="
+       enemyLordFate('bold' ,69  );
+      "
+    >
+      Surrendered ?
+    </button>
+    <button
+      onclick="
+
+      userLordArmy(1300 , 2000);
+    "
+    >
+      war result?
+    </button>
+    <script>
+      function enemyLordFate(personality, fearLevel) {
+        if (personality === "cowardly" && fearLevel > 50) {
+          alert("The enemy lord has surrendered my Lord");
+        } else if (personality === "brave" && fearLevel === 100) {
+          alert("The enemy lord has surrendered my Lord");
+        } else if (personality === "bold" && fearLevel > 75) {
+          alert("The enemy lord has surrendered my Lord");
+        } else {
+          alert("The enemy refused to  surrendered my Lord");
+        }
+      }
+      function userLordArmy(userArmy, enemyArmySize) {
+        if (userArmy < enemyArmySize) {
+          alert("You have lost in war . The enemies win");
+        } else if (userArmy === enemyArmySize) {
+          alert(
+            "You lost since war last longer than u expected and the war supply ranout leading to the starvation of your army"
+          );
+        } else if (userArmy > enemyArmySize) {
+          alert("You have win the war my lord");
+        }
+      }
+      function executionerFate() {}
+    </script>
+  </body>
+</html>

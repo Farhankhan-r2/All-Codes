@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('button').forEach(function (button) {
+        button.onclick = function () {
+          document.querySelector('#hello').style.color = button.dataset.color;
+        };
+      });
+    });
+
+
+    /*what this code does explaination
+      first line says that when the DOM content is loaded run this code that code is defined above
+
+      then in this function we select all button ,then forEach method allow us to run code foreach button (function) the  function is defined there too which take parmeter button and inside tht function 
+      we have button.onclick then other function tht activtes when u click the button
+    
+    */
+  </script>
+
+</head>
+
+<body>
+  <h1 id="hello">HELLO!</h1>
+  <button data-color="red">Red</button>
+  <button data-color="blue">blue</button>
+  <button data-color="green">green</button>
+</body>
+
+</html>

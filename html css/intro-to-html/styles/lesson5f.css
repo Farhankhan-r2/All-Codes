@@ -1,0 +1,27 @@
+p {
+  font-family: arial;
+  margin-top: 8px;
+  margin-bottom: 0px;
+  text-align: left;
+}
+.worth {
+  font-size: 30px;
+  color: black;
+}
+.currency {
+  color: rgb(156, 155, 155);
+  font-size: 15px;
+}
+.market-value {
+  color: rgb(74, 180, 74);
+  font-size: 15px;
+  font-weight: 400;
+}
+.time {
+  color: rgb(156, 155, 155);
+  font-size: 15px;
+  font-weight: 400;
+}
+.loss {
+  color: rgb(234, 82, 48);
+}

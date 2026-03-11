@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>DOM projects</title>
+</head>
+
+<body>
+  <div class="section-1">
+    <title>YouTube Subscribe Button</title>
+    <button onclick="subscribe()" class="js-subscribe-button">
+      subscribed
+    </button>
+  </div>
+
+  <div class="section-2">
+    <title>Amazon Shipping Calculator</title>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+    <input class="js-cost-input" onkeydown="handleCostKeydown(event)" type="number" placeholder="cost of order" />
+    <button onclick="calculateTotal()">Calculate</button>
+    <p class="js-total-cost"></p>
+  </div>
+
+  <div class="section-3">
+    <title>Rock Paper Scissors</title>
+  </div>
+  <script>
+    String(20);
+    console.log("25" - 5);
+    // adding works diffently thats why this method is not recommended
+    window.document;
+    window.console.log("window");
+    window.alert;
+
+    console.log("25" + 5);
+    function handleCostKeydown(event) {
+      if (event.key === "enter");
+      {
+        calculateTotal();
+      }
+    }
+    function calculateTotal() {
+      const inputElement = document.querySelector(".js-cost-input");
+      let cost = Number(inputElement.value);
+      if (cost < 40) {
+        cost = cost + 10;
+      }
+      document.querySelector(".js-total-cost").innerHTML = `$${cost}`;
+    }
+    function subscribe() {
+      const buttonElement = document.querySelector(".js-subscribe-button");
+      if (buttonElement.innerText === "subscribed") {
+        buttonElement.innerText = "subscribed";
+      } else {
+        buttonElement.innerText = "subscribe";
+      }
+    }
+  </script>
+</body>
+
+</html>

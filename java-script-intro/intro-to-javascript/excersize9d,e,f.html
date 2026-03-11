@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <input class="userName" type="text" placeholder="Name" onkeydown="nameOnKey(event)">
+
+  <button onclick="displayName();" class="submit-button">Submit</button>
+  <p class="js-name"></p>
+
+
+  <script>
+    function nameOnKey(event) {
+      if (event.key === 'Enter') {
+        displayName();
+      }
+      return 0;
+
+    }
+
+    function displayName() {
+      let text1 = document.querySelector('.userName').value;
+      document.querySelector('.js-name').innerHTML = `YOUR NAME IS:  ${text1}`;
+      return 0;
+    }
+
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .gaming-button {
+      background-color: rgb(223, 219, 219);
+      color: black;
+      font-family: arial;
+      font-size: 16px;
+      border: none;
+      padding: 10px 12px;
+      border-radius: 2px;
+      cursor: pointer;
+
+    }
+
+    .new-gaming-button {
+      background-color: black;
+      color: white;
+    }
+  </style>
+
+</head>
+
+<body>
+  <button class="gaming-button">
+    Gaming
+  </button>
+  <script>
+    document.querySelector('.gaming-button').onclick = changeClass;
+    function changeClass() {
+      const buttonElm = document.querySelector('.gaming-button');
+      if (buttonElm.classList.contains('new-gaming-button')) {
+        buttonElm.classList.remove('new-gaming-button');
+      } else {
+        buttonElm.classList.add('new-gaming-button');
+      };
+
+    }
+
+
+
+  </script>
+</body>
+
+</html>

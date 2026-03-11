@@ -1,0 +1,23 @@
+p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.tahoma {
+  font-size: 20px;
+  font-family: tahoma;
+  font-weight: bold;
+  margin-top: 10px;
+}
+.salesanddeals {
+  font-size: 20px;
+  font-family: arial;
+  font-weight: bold;
+  width: 250px;
+  margin-top: 10px;
+}
+.salesenddate {
+  color: rgb(228, 75, 75);
+  font-size: 14px;
+  font-style: italic;
+  font-weight: lighter;
+}

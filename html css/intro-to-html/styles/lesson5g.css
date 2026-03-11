@@ -1,0 +1,26 @@
+p {
+  font-family: arial;
+  font-size: 20px;
+  color: black;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.title {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.username {
+  font-weight: lighter;
+  color: rgb(136, 135, 135);
+}
+.intro {
+  width: 630px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+.ending {
+  font-weight: 500;
+}
+.skill-name {
+  color: rgb(80, 151, 233);
+}

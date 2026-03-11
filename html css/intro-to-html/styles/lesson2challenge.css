@@ -1,0 +1,59 @@
+.backtoamazon {
+  margin-left: 4px;
+}
+.backtoamazon:hover {
+  color: rgb(226, 158, 31);
+}
+.shoes {
+  font-size: 25px;
+  font-weight: bolder;
+  margin-left: 4px;
+}
+
+.price {
+  color: rgb(41, 121, 41);
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 4px;
+}
+
+.delivery {
+  margin-left: 4px;
+}
+
+.addtocart-button {
+  background-color: rgb(255, 216, 20);
+  color: black;
+  height: 32px;
+  width: 110px;
+  font: bolder;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+}
+.addtocart-button:hover {
+  background-color: rgb(198, 168, 17);
+  transition: background-color 0.2s;
+}
+.addtocart-button:active {
+  opacity: 0.6;
+}
+
+.buynow-button {
+  background-color: rgb(234, 170, 52);
+  color: black;
+  height: 32px;
+  width: 110px;
+  border: none;
+  font: bold;
+  cursor: pointer;
+  border-radius: 16px;
+  margin-left: 8px;
+}
+.buynow-button:hover {
+  background-color: rgb(167, 122, 38);
+  transition: background-color 0.15s;
+}
+.buynow-button:active {
+  opacity: 0.6;
+}

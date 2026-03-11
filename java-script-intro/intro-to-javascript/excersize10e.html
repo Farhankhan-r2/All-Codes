@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .practice-button {
+      background-color: rgb(223, 219, 219);
+      color: black;
+      font-family: arial;
+      font-size: 16px;
+      border: none;
+      padding: 10px 12px;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+
+    .new-practice-button {
+      background-color: black;
+      color: white;
+    }
+  </style>
+
+</head>
+
+<body>
+  <button class="practice-button">Gaming</button>
+  <button class="practice-button">Music</button>
+  <button class="practice-button">Text</button>
+
+
+  <script>
+    document.querySelectorAll('.practice-button').forEach(button => {
+      button.addEventListener('click', function () {
+        changeClass();
+
+      })
+
+    })
+    function changeClass() {
+      const buttonElm = document.querySelector('.practice-button');
+      if (buttonElm.classList.contains('new-practice-button')) {
+        buttonElm.classList.remove('new-practice-button');
+      } else {
+        buttonElm.classList.add('new-practice-button');
+      }
+    }
+  </script>
+</body>
+
+</html>

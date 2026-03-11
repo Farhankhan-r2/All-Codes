@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <script>
+      function greet(name) {
+        if (!name) {
+          console.log("hey there");
+        } else {
+          console.log(`hellow ${name}`);
+        }
+      }
+      greet();
+
+      function convertToFahrenheit(celsius) {
+        let fahrenheit = (celsius * 9) / 5 + 32;
+        return fahrenheit;
+      }
+      console.log(convertToFahrenheit(25));
+
+      function convertToCelsius(fahrenheit) {
+        let celsius = ((fahrenheit - 32) * 5) / 9;
+        return celsius;
+      }
+      console.log(convertToCelsius(86));
+      //YOU can also recall the above function though its okay
+      function temperatureConverter(degree, unit) {
+        if (unit === "C") {
+          let fahrenheit = `${(degree * 9) / 5 + 32} F`;
+          return fahrenheit;
+        } else if (unit === "F") {
+          let celsius = `${((degree - 32) * 5) / 9} C`;
+          return celsius;
+        }
+      }
+      let result = temperatureConverter(86, "F");
+      console.log(result);
+    </script>
+  </body>
+</html>

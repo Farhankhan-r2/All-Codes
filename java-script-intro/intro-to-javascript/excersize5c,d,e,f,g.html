@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <script>
+      let coffeeCost = 500;
+      let bagelsCost = 300;
+      let soupCost = 900;
+      coffeeCost *= 1;
+      bagelsCost *= 2;
+      soupCost *= 1;
+
+      const cost = (bagelsCost + coffeeCost + soupCost) / 100;
+      const tax = ((bagelsCost + coffeeCost + soupCost) / 100) * 0.1;
+      const totalCost = cost + tax;
+      console.log(`Tax(10%):$${tax}`);
+      console.log(`Cost without tax:$${cost}`);
+      console.log(`Total Cost:$${totalCost}`);
+    </script>
+  </body>
+</html>

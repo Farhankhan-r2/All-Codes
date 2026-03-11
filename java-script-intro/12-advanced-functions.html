@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <script>
+    /*
+    greeting();
+    function greeting() {
+      console.log('hellow');
+    };
+    //here hoisting(function declation should be on top before u use it) doesnt work  also when we declare a function in  a varaible its not needed to declre funct name
+    // see -console.log(function1);
+    const function1 = function () {
+      console.log('hellow');
+    };
+    console.log(function1);
+    console.log(typeof function1);
+
+    //since function are values we can save it in variable , object also we can pass a value into a function~through parameter also we can pass a function into an another function
+
+    // this is called method because function save inside an object
+    const object1 = {
+      num: 2, fun: function (param) { console.log(param) }
+    };
+    object1.fun('object-function');
+
+    function run(pram) {
+      pram(); // since param contains  a function we can call the function using the parameter name();
+    }
+    run(function () {
+      console.log('hellow4');
+    } //this is callbcak function(functionthat we are psasing to other function));  
+   
+
+    //built in function that allow you to run a function in the future take 2 param function and how many mili sec 1000 milisec = 1sec
+    setTimeout(function () {
+      console.log('time-out') //although inside the function  all is synchronous code
+      console.log('time-out')
+    }, 3000);
+    //when we call this function it will run after 3sec
+    console.log('nextLine'); // see the function strt timer but this print first when timer is out the function got print its like 
+    //computer  strt  a timer on the function and execute further code the timer code will execute automtically when the timer is off
+     
+    // allow us to run the function  again and again  after the given time
+    //setInterval(function () { console.log('interval') }, 3000);
+
+     */
+    //another way to loop through an array
+    ['make dinner', 'wash dishes', 'complete project'].forEach(function (value, index) {
+      if (value === 'wash dishes') {
+        return; // work same  as continue sa in for loop in case of break just use for loop
+      }
+      console.log(index);
+      console.log(value);
+    });
+  </script>
+</body>
+
+</html>

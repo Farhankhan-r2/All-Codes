@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .button-container {
+        display: flex;
+      }
+      button {
+        cursor: pointer;
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="title-container">
+        <p>Cart quantity</p>
+      </div>
+      <div class="button-container">
+        <button
+          onclick="console.log(`cartQuantity:${cartQuantity}`);"
+          class="showquantity-button"
+        >
+          Show Quantity
+        </button>
+
+        <button
+          onclick="
+          cartQuantity ++;
+          console.log(`cartQuantity:${cartQuantity}`);"
+          class="addtocart-button"
+        >
+          Add to creates
+        </button>
+
+        <button
+          onclick="
+          cartQuantity = cartQuantity+2;
+          console.log(`cartQuantity:${cartQuantity}`);"
+          class="plus2-button"
+        >
+          +2
+        </button>
+
+        <button
+          onclick="
+          cartQuantity +=3;
+          console.log(`cartQuantity:${cartQuantity}`);"
+          class="plus3-button"
+        >
+          +3
+        </button>
+
+        <button
+          onclick="
+          cartQuantity +=4;
+          console.log(`cartQuantity:${cartQuantity}`);"
+          class="plus3-button"
+        >
+          +4
+        </button>
+        <button
+          onclick="
+          cartQuantity +=5;
+          console.log(`cartQuantity:${cartQuantity}`);"
+          class="plus3-button"
+        >
+          +5
+        </button>
+        <button
+          onclick="
+          cartQuantity --;
+          console.log(`cartQuantity:${cartQuantity}`);"
+          class="plus3-button"
+        >
+          -1
+        </button>
+        <button
+          onclick="
+          cartQuantity -=2;
+          console.log(`cartQuantity:${cartQuantity}`);"
+          class="plus3-button"
+        >
+          -2
+        </button>
+        <button
+          onclick="
+          cartQuantity -=3;
+          console.log(`cartQuantity:${cartQuantity}`);"
+          class="plus3-button"
+        >
+          -3
+        </button>
+
+        <button
+          onclick="
+          cartQuantity=0;
+          console.log('Cart was reset');
+          console.log(`cartQuantity:${cartQuantity}`);"
+          class="Reset Cart"
+        >
+          Reset Cart
+        </button>
+      </div>
+    </main>
+    <script>
+      let cartQuantity = 0;
+    </script>
+  </body>
+</html>

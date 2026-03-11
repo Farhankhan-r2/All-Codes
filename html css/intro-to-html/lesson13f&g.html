@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .outer-container {
+        width: 500px;
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+      }
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        object-fit: cover;
+      }
+      .info-container {
+        margin-left: 20px;
+        flex: 1;
+      }
+      p {
+        font-family: arial;
+        margin-top: 5px;
+        margin-bottom: 0px;
+      }
+      span {
+        color: grey;
+      }
+      .sub-info-container {
+        border-width: 1px;
+        border-style: solid;
+        border-color: grey;
+        height: 100px;
+        border-radius: 20px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 20px;
+      }
+      .thumbnail {
+        background-color: grey;
+        width: 100px;
+        height: 100px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+      }
+      .youtube-link {
+        flex: 1;
+        margin-left: 10px;
+      }
+
+      .link {
+        color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer-container">
+      <img src="cat-image2.webp" />
+      <div class="info-container">
+        <p><strong>fullstack.dev </strong><span>@fullstack.devv</span></p>
+        <p>
+          What is backend web development ? A complete overview.New video is up!
+        </p>
+        <div class="sub-info-container">
+          <div class="thumbnail"></div>
+          <div class="youtube-link">
+            <a class="link" href="https://www.youtube.com/">youtube.com</a>
+            <p>Backend web development - a complete overview (2021)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

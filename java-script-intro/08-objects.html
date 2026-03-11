@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+  <head>
+    <title>objects</title>
+  </head>
+  <body>
+    <script>
+      /*
+       1. Creating the Object (Quotes are Optional-ish)
+           When you are first creating an object (the part inside the curly braces {}), you are defining "keys."
+
+           Normal Keys: If the name is a simple word with no spaces or special characters, you don't need quotes.
+
+           wins: 0 is the same as 'wins': 0.
+
+           Special Keys: If the name has a hyphen or a space, you must use quotes so JavaScript doesn't get confused.
+
+           Example: 'delivery-time': '3 days'.
+       */
+      /*
+       const product = {
+         name: "socks",
+         price: 1090,
+       };
+       console.log(product);
+       console.log(product.name);
+       console.log(product.price);
+
+       product.name = "cotton socks";
+       console.log(product);
+       
+      const product2 = {
+        name: "shirt",
+        // we only have string between the brackets so the brackets are optional so i removed it.
+        "delivery-time": "1 day",
+        rating: {
+          stars: 4.5,
+          count: 87,
+        },
+        fun: function function1() {
+          console.log("function inside object");
+        },
+      };
+      
+       console.log(product2);
+       console.log(product2.name);
+       console.log(product2["name"]);
+       console.log(product2["delivery-time"]);
+
+       console.log(product2.rating.count);
+       product2.fun();
+       console.log(typeof console);
+       console.log(typeof console.log);
+       
+
+     
+
+      console.log(JSON.stringify(product2));
+      const jsonString = JSON.stringify(product2);
+      console.log(JSON.parse(jsonString));
+      */
+      console.log("hello".length);
+      console.log("hello".toUpperCase());
+
+      const object1 = {
+        message: "hellow",
+      };
+      const object2 = object1;
+
+      object1.message = "Good job!";
+      console.log(object1);
+      console.log(object2);
+
+      const object3 = {
+        message: "Good job!",
+      };
+      console.log(object2 === object3);
+      console.log(object2 === object1);
+
+      //destructuring
+
+      const object4 = {
+        message: "Good job!",
+        price: 799,
+      };
+      //const message = object4.message;
+      const { message, price } = object4;
+      console.log(message);
+      console.log(price);
+
+      //short hand property
+      //shorthand method
+      const object5 = {
+        //message: message,
+        message,
+        // method: function function1() {
+        //  console.log("method");
+        //},
+        method() {
+          console.log("method");
+        },
+      };
+      console.log(object5);
+      object5.method();
+    </script>
+  </body>
+</html>

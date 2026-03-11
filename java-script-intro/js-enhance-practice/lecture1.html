@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head></head>
+
+<body>
+  <script>
+    let number = 0;
+    function count() {
+      number++;
+      if (number % 2 === 0) {
+        document.querySelector('h1').innerText = number;
+      }
+      return 0;
+    }
+    //what if i dont want any js code in html code 
+    /* as u can see im not calling count fucntion here what im doing is when the button is clicked then and only then run the count function*/
+
+
+    //DOM hasnt loaded the content of the page isnt loaded yet as a result we  arent  able to find button to solve this problem use
+    //1.use script tag at bottom of the body 2. add event listener to document 
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // document.querySelector('button').onclick = count; or
+      document.querySelector('button').addEventListener('click', count);
+    });
+  </script>
+
+  <h1>0</h1>
+  <button>count</button>
+
+
+
+</body>
+
+</html>

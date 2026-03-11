@@ -1,0 +1,1 @@
+unit[strlen(unit) - 1] = '\0';

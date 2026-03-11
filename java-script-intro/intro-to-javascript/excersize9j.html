@@ -1,0 +1,73 @@
+<!Doctype html>
+<html>
+
+<head>
+  <title>Calculator</title>
+  <style>
+    body {
+      padding-left: 10px;
+    }
+
+    p {
+      margin: 0;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    div {
+      display: grid;
+      grid-template-columns: 50px 50px 50px 50px;
+      row-gap: 3px;
+      column-gap: 5px;
+      height: 220px;
+    }
+
+    .title {
+      font-family: arial;
+      font-size: 40px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <p class="title">Calculator</p>
+  <div>
+    <button onclick="calculation += '1'; updateCalculation(); ">1</button>
+    <button onclick="calculation += '2'; updateCalculation(); ">2</button>
+    <button onclick="calculation += '3'; updateCalculation(); ">3</button>
+    <button onclick="calculation += '+'; updateCalculation(); ">+</button>
+
+    <button onclick="calculation += '4'; updateCalculation(); ">4</button>
+    <button onclick="calculation += '5'; updateCalculation(); ">5</button>
+    <button onclick="calculation += '6'; updateCalculation(); ">6</button>
+    <button onclick="calculation += '-'; updateCalculation(); ">-</button>
+
+    <button onclick="calculation += '7'; updateCalculation(); ">7</button>
+    <button onclick="calculation += '8'; updateCalculation(); ">8</button>
+    <button onclick="calculation += '9'; updateCalculation(); ">9</button>
+    <button onclick="calculation += '*'; updateCalculation(); ">*</button>
+
+    <button onclick="calculation += '0'; updateCalculation(); ">0</button>
+    <button onclick="calculation += '.'; updateCalculation(); ">.</button>
+    <button onclick="initiateCalculation(); updateCalculation();">=</button>
+    <button onclick="calculation += '/'; updateCalculation(); ">/</button>
+
+    <button onclick="calculation = ''; updateCalculation(); ">Reset</button>
+  </div>
+  <p class="result"></p>
+  <script>
+    let calculation = '';
+    function initiateCalculation() {
+      calculation = eval(calculation);
+
+    };
+    function updateCalculation() {
+      document.querySelector('.result').innerText = `calculation: ${calculation}`;
+    };
+
+  </script>
+
+</body>
+
+</html>

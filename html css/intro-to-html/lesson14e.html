@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: arial;
+      }
+      body {
+        background-color: lightblue;
+      }
+      .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 100;
+        left: 300px;
+        right: 300px;
+        background-color: white;
+      }
+      .column-1 {
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        align-items: center;
+      }
+      img {
+        object-fit: cover;
+        height: 40px;
+        width: 40px;
+        border-radius: 20px;
+        margin-right: 10px;
+      }
+      .column-2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+      }
+      .addfriend-button {
+        padding-top: 8px;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-bottom: 8px;
+        background-color: rgb(39, 116, 249);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+      .message-button {
+        padding-top: 8px;
+        padding-left: 8px;
+        padding-right: 8px;
+        padding-bottom: 8px;
+        background-color: rgb(212, 210, 210);
+        color: black;
+        border: none;
+        border-radius: 8px;
+        margin-right: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="column-1">
+        <img src="cat-image3.webp" />
+        <p><strong>Oliver Cat</strong></p>
+      </div>
+      <div class="column-2">
+        <button class="addfriend-button">Add Friend</button>
+        <button class="message-button">Message</button>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Real Time User Input</title>
+  <style>
+    .user-input {
+      font-family: arial;
+      font-size: 15px;
+      padding: 10px 0px 10px 10px;
+    }
+
+    p {
+      font-family: arial;
+      font-size: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <input type="text" class="user-input">
+  <p class="userInput-js"></p>
+
+
+
+  <script>
+
+    /*  function takeUserInput(event) {
+       IN CASE OF ONKEYDOWN ---here re two thing happening that was when i press any key the this function ran but the broer virtually update the screen later ex - when u press first key A the event trigger function ran it checks input value but its nothing "" so it update p with nothing then  after function stop then brower update the input value virtually
+       
+       WHILE WHEN WE USE ONKEYUP --- in case of onkeyup the situation changes when we press a key the time it goes up function isnt triggered and the vlue is updated in input then when the keycomes up the function then get triggered
+       
+ 
+ 
+       const inputValue = document.querySelector('.user-input').value;
+       document.querySelector('.userInput-js').innerText = `${inputValue}`;
+       console.log(event.key);
+       console.log(document.querySelector('.user-input').value);
+     };
+     */
+
+    //Professional way of writing 
+    document.addEventListener('keyup', function (event) {
+      const input = document.querySelector('.user-input');
+      const paragraph = document.querySelector('.userInput-js');
+      paragraph.innerText = input.value;
+    });
+
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>DOM</title>
+</head>
+
+<body>
+  <button>hellow</button>
+  <button class="js-button">second button</button>
+  <script>
+    console.log((document.querySelector("button").innerHTML = "changed"));
+
+    const buttonElement = document.querySelector(".js-button");
+    console.log(buttonElement);
+
+    /*
+    console.log(document.title);
+    document = "changed";
+
+    console.log(document.body);
+    console.log(typeof document.body);
+
+    console.log(document.body.innerHTML);
+    document.body.innerHTML = "<button>good job </button>";
+
+
+    document.body.innerHTML = 'hello ';
+    document.title = 'good job!
+    */
+    /*📌 Changing Button Styles Using this
+
+ querySelector() selects only the first matching element in the document.
+ That’s why only the first button was changing before.
+ this)refers to the exact button that was clicked.
+ When we pass this inside onclick, the clicked button is sent into the function.
+ Inside the function, we use:
+ classList.contains() → checks if the class exists.
+ classList.add() → adds the class.
+ classList.remove() → removes the class.
+ This allows each button to control its own style.
+ ✅ Key Idea:
+ querySelector() searches the page.
+ this directly refers to the clicked element.*/
+  </script>
+</body>
+
+</html>

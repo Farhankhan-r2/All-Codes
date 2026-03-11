@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>challenge excersize</title>
+</head>
+
+<body>
+  <input class="user-input" type="text" placeholder="Cost of item" onkeydown="onKeyCalculate(event);">
+  <button class="calculte-button" onclick="calculateOnClick();">calculate</button>
+  <p class="costOfItem"></p>
+  <script>
+    function onKeyCalculate(event) {
+      if (event.key === 'Enter') {
+        calculateOnClick();
+      }
+      return 0;
+    }
+    function calculateOnClick() {
+      let cost = Number(document.querySelector('.user-input').value);
+      if (cost <= 40) {
+        cost = (cost * 100 + 1000) / 100;
+        document.querySelector('.costOfItem').innerText = `The total cost with the shipping fee included: $${cost}`;
+      } else if (cost > 40) {
+        document.querySelector('.costOfItem').innerText = `The total cost with free shipping: $${cost}`;
+      }
+      return 0;
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <p>Rock paper scissors</p>
+  <button onclick=" gameRules('Rock'); ">Rock</button>
+  <button onclick=" gameRules('Paper'); ">Paper</button>
+  <button onclick=" gameRules('Scissors'); ">Scissors</button>
+  <button
+    onclick="scoreBox.wins = 0 , scoreBox.loses = 0 ,scoreBox.ties = 0 , scoreUpdater() , localStorage.removeItem('score'); ">Reset
+    score</button>
+  <p class="js-choice-elm"></p>
+  <P class="js-score-elm"></P>
+
+
+  <script>
+    let scoreBox = JSON.parse(localStorage.getItem('score')) || {
+      wins: 0,
+      loses: 0,
+      ties: 0
+    };
+    function scoreUpdater() {
+      document.querySelector('.js-score-elm').innerText = `wins: ${scoreBox.wins} | loses: ${scoreBox.loses} | ties: ${scoreBox.ties}`;
+
+    };
+    function pickComputerMove() {
+      let computerMove = '';
+      const randomNumber = Math.random();
+      if (randomNumber >= 0 && randomNumber < 1 / 3) {
+        computerMove = 'Rock';
+      } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+        computerMove = 'Paper';
+      } else if (randomNumber >= 2 / 3 && randomNumber <= 1) {
+        computerMove = 'Scissors';
+      }
+      return computerMove;
+    };
+    function gameRules(userMove) {
+      const computerMove = pickComputerMove();
+      let result = '';
+      if (userMove === computerMove) {
+        result = 'TIE';
+      } else if (userMove === 'Rock' && computerMove === 'Paper') {
+        result = 'YOU-LOSE';
+      } else if (userMove === 'Rock' && computerMove === 'Scissors') {
+        result = 'YOU-WIN';
+      } else if (userMove === 'Paper' && computerMove === 'Rock') {
+        result = 'YOU-WIN';
+      } else if (userMove === 'Paper' && computerMove === 'Scissors') {
+        result = 'YOU-LOSE';
+      } else if (userMove === 'Scissors' && computerMove === 'Rock') {
+        result = 'YOU-LOSE';
+      } else if (userMove === 'Scissors' && computerMove === 'Paper') {
+        result = 'YOU-WIN';
+      }
+      document.querySelector('.js-choice-elm').innerText = `Your chose: ${userMove} | Computer chose: ${computerMove} | ${result}`;
+
+      if (result === 'YOU-WIN') {
+        scoreBox.wins++;
+      } else if (result === 'YOU-LOSE') {
+        scoreBox.loses++;
+      } else if (result === 'TIE') {
+        scoreBox.ties++;
+      }
+      scoreUpdater();
+
+      localStorage.setItem('score', JSON.stringify(scoreBox));
+      return '\0';
+    };
+  </script>
+</body>
+
+</html>

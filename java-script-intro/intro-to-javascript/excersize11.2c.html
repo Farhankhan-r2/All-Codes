@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <script>
+    /*fizzBuzz problem
+    for (let i = 1; i <= 20; i++) {
+      if (i % 3 === 0 && i % 5 === 0) {
+        console.log(`~~FizzBuzz`);
+
+      } else if (i % 5 === 0) {
+        console.log(`~Buzz`);
+      } else if (i % 3 === 0) {
+        console.log(`~Fizz`);
+      } else {
+        console.log(i);
+      } 
+    }*/
+
+    function findIndex(array1, word) {
+      for (let i = 0; i < array1.length; i++) {
+        if (array1[i] === word) {
+          return i;
+        }
+      }
+      return -1;
+    }
+    function unique(array) {
+      let uniqueArray = [];
+      //If the word is NOT found in uniqueArray thats the condition
+      for (let i = 0; i < array.length; i++) {
+        if (findIndex(uniqueArray, array[i]) === -1) {
+          uniqueArray.push(array[i]);
+        }
+      }
+
+      console.log(uniqueArray);
+    }
+
+    unique(['hey', 'wassup', 'conjuring', 'wassup']);
+
+
+  </script>
+
+
+</body>
+
+</html>

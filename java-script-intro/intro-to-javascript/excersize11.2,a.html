@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <script>
+
+
+
+    function findIndex(array1, word) {
+
+      let notFound = 0;
+
+      for (let i = 0; i < array1.length; i++) {
+        if (array1[i] === word) {
+          console.log(i);
+          break;
+        } else {
+          notFound += 1;
+        }
+      }
+      if (notFound === array1.length) {
+        console.log(-1)
+      }
+    }
+    findIndex(['hey', 'wassup', 'conjuring',], 'search');
+
+    /* gpt solution SEE NO VARIBALE IS CREATED just simple logic
+        function findIndex(array1, word) {
+    
+      for (let i = 0; i < array1.length; i++) {
+        if (array1[i] === word) {
+          console.log(i);
+          return;
+        }
+      }
+    
+      console.log(-1);
+    }*/
+  </script>
+
+</body>
+
+</html>

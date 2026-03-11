@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      font-family: arial;
+      font-size: 14px;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      //i can also write the function name like .onsubmit = functionname; o u can also define the function there
+      document.querySelector('form').onsubmit = function () {
+        const name = document.querySelector('#name').value;
+        alert(`hellow ${name}!`);
+
+      };
+
+    });
+  </script>
+
+</head>
+
+<body>
+  <h1>
+    Hello!
+  </h1>
+  <form>
+    <input autofocus id="name" placeholder="Name" type="text">
+    <input type="submit">
+  </form>
+
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        padding-left: 10px;
+        padding-top: 10px;
+      }
+      .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 5px;
+      }
+      p {
+        font-family: arial;
+        margin: 0;
+        margin-bottom: 5px;
+      }
+      .button-container {
+        display: flex;
+        flex-direction: row;
+        width: 200px;
+        align-items: center;
+      }
+      .addtocart-button {
+        border: 1px solid black;
+        border-radius: 8px;
+        padding: 5px 4px 5px 4px;
+        background-color: rgb(243, 243, 77);
+        color: black;
+        font-family: arial;
+        margin-right: 5px;
+        cursor: pointer;
+      }
+      .buynow-button {
+        border: 1px solid black;
+        border-radius: 8px;
+        font-family: arial;
+        background-color: rgb(237, 173, 53);
+        color: black;
+        padding: 5px 4px 5px 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="text-container">
+        <p>Adults plain Cotton T-shirts</p>
+        <p>Price:$7.99</p>
+      </div>
+      <div class="button-container">
+        <button onclick=" alert('Added');" class="addtocart-button">
+          Add to Cart
+        </button>
+        <button onclick=" alert('Loading...');" class="buynow-button">
+          Buy now
+        </button>
+      </div>
+    </main>
+    <script>
+      console.log(alert("purchased"));
+    </script>
+  </body>
+</html>

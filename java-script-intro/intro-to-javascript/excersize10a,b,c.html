@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    .addToCart {
+      font-family: arial;
+      margin: 10px;
+      font-size: 16px;
+      padding: 8px 35px;
+      background-color: rgb(255, 216, 20);
+      color: black;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .request-now {
+      font-family: arial;
+      padding: 10px 18px;
+      background-color: black;
+      color: white;
+      font-size: 16px;
+      font-family: bold;
+      border: none;
+    }
+
+    .schedule-later {
+      font-family: arial;
+      padding: 12px 16px;
+      background-color: rgb(230, 230, 230);
+      color: black;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  </style>
+
+</head>
+
+<body>
+  <button class="addToCart">Add to Cart</button>
+  <div>
+    <button class="request-now">Request now</button>
+    <button class="schedule-later">
+      Schedule for later
+    </button>
+  </div>
+  <button class="js-button">
+    wassup!!
+  </button>
+
+  <script>
+    const variable1 = document.querySelector('.js-button').classList.contains('js-button');
+    console.log(variable1);
+  </script>
+</body>
+
+</html>

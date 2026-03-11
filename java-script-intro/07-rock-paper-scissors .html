@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <p>Rock Paper Scissor</p>
+    <div>
+      <!--Arguments (in the button): Are the "Values" being sent. If you use a variable name here, JavaScript automatically swaps it for the value inside that variable.
+
+      Parameters (in the script): Are the "Local Names" the function uses to refer to those values once they arrive.
+      IN SHORT IT LOOK FOR CONTAINER NAMED USERPICK & COMPUTERMOVE BEFORE RUNNING THE FUNCTION NAME USERPICKFUNCTION AND IN SCRIPT WE JUST DEFINE PARAMETER BUT IN BUTTON WE ARE DEFINING ARGUMENT.
+      -->
+      <button
+        onclick="
+          let userPick ='Rock';
+          let computerMove = pickComputerMove();
+          userPickfunction(userPick , computerMove);
+
+            "
+      >
+        Rock
+      </button>
+      <button
+        onclick="
+          userPick ='Paper';
+          computerMove = pickComputerMove();
+         userPickfunction(userPick , computerMove);
+          
+          "
+      >
+        Paper
+      </button>
+      <button
+        onclick="
+           userPick ='Scissor';
+           computerMove = pickComputerMove();
+          userPickfunction(userPick , computerMove);
+       
+        "
+      >
+        Scissor
+      </button>
+    </div>
+    <script>
+      function pickComputerMove() {
+        const randomNumber = Math.random();
+        let computerPick = "";
+        if (randomNumber >= 0 && randomNumber < 1 / 3) {
+          computerPick = "Rock";
+        } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+          computerPick = "Paper";
+        } else if (randomNumber >= 2 / 3 && randomNumber <= 1) {
+          computerPick = "Scissor";
+        }
+        return computerPick;
+      }
+      function userPickfunction(userPick, computerMove) {
+        if (userPick === "Rock") {
+          if (computerMove === "Rock") {
+            alert(
+              `You Picked ${userPick}.Computer Picked ${computerMove} \n TIE`
+            );
+          } else if (computerMove === "Paper") {
+            alert(
+              `You Picked ${userPick}.Computer Picked ${computerMove} \n YOU LOSE`
+            );
+          } else if (computerMove === "Scissor") {
+            alert(
+              `You Picked ${userPick}.Computer Picked ${computerMove} \n YOU WIN`
+            );
+          }
+        } else if (userPick === "Paper") {
+          if (computerMove === "Rock") {
+            alert(
+              `You Picked ${userPick}.Computer Picked ${computerMove} \n YOU WIN`
+            );
+          } else if (computerMove === "Paper") {
+            alert(
+              `You Picked ${userPick}.Computer Picked ${computerMove} \n TIE`
+            );
+          } else if (computerMove === "Scissor") {
+            alert(
+              `You Picked ${userPick}.Computer Picked ${computerMove} \n YOU LOSE`
+            );
+          }
+        } else if (userPick === "Scissor") {
+          if (computerMove === "Rock") {
+            alert(
+              `You Picked ${userPick}.Computer Picked ${computerMove} \n YOU LOSE`
+            );
+          } else if (computerMove === "Paper") {
+            alert(
+              `You Picked ${userPick}.Computer Picked ${computerMove} \n YOU WIN`
+            );
+          } else if (computerMove === "Scissor") {
+            alert(
+              `You Picked ${userPick}.Computer Picked ${computerMove} \n TIE`
+            );
+          }
+        }
+
+        return;
+      }
+
+      /*const randomNumber = Math.random();
+      let userPick = "";
+      . The Variable Scope Mistake
+      The Error: Putting Math.random() in the <script> tag instead of inside the onclick.
+      The Result: The computer picks one number when the page loads and never changes it until you refresh.
+      The Fix: Move const randomNumber = Math.random(); inside each button's onclick.*/
+    </script>
+  </body>
+</html>

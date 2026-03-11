@@ -1,0 +1,16 @@
+button {
+  background-color: green;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  padding-right: 15px;
+  cursor: pointer;
+  box-shadow: 3px 2px 5px rgba(0, 0, 0, 0.3);
+  border: none;
+}
+button:active {
+  box-shadow: none;
+  margin-top: 3px;
+  margin-left: 2px;
+}

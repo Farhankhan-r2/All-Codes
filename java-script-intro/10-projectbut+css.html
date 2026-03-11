@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    Project with CSS
+  </title>
+  <style>
+    body {
+      font-family: arial;
+    }
+
+    body p {
+      margin: 0;
+    }
+
+    .upper-part {
+      width: fit-content;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-left: 5px;
+    }
+
+    .upper-part p {
+
+      margin-top: 5px;
+      margin-bottom: 10px;
+    }
+
+    .js-subscribe-button {
+      padding: 8px 13px 8px 13px;
+      font-family: arial;
+      color: white;
+      background-color: rgb(27, 27, 27);
+      cursor: pointer;
+      border: none;
+      border-radius: 20px;
+    }
+
+
+    .is-subscribed {
+      background-color: rgb(208, 202, 202);
+      color: black;
+    }
+
+
+
+    .middle-part {
+      margin: 10px 10px 10px 5px;
+    }
+
+    .middle-part p {
+      margin: 5px 0px 5px 0px;
+    }
+
+    input {
+      padding: 8px 5px 8px 12px;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    input::placeholder {
+      margin-left: 12px
+    }
+
+    .middle-part button {
+      font-size: 18px;
+      color: rgb(28, 27, 27);
+      padding: 8px;
+      background-color: rgb(31, 130, 31);
+      border: 1px, solid, rgb(15, 91, 8);
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .middle-part button:hover {
+      background-color: rgb(41, 146, 41);
+    }
+
+    .middle-part button:active {
+      background-color: rgb(52, 170, 52);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="upper-part">
+    <p>YouTube Subscribe Button</p>
+    <button class="js-subscribe-button" onclick="subscribe();">Subscribe</button>
+  </div>
+  <div class="middle-part">
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+    <input type="number" placeholder="Cost of order" onkeydown=" initiateCalculationOnkey(event);">
+    <button onclick="initiateCalculation()">Calculate</button>
+    <p class=js-element></p>
+
+  </div>
+
+
+  <script>
+    function subscribe() {
+      const buttonElement = document.querySelector('.js-subscribe-button');
+      if (buttonElement.innerText === 'Subscribe') {
+        buttonElement.innerHTML = 'Subscribed';
+        buttonElement.classList.add('is-subscribed');
+      } else {
+        buttonElement.innerHTML = 'Subscribe';
+        buttonElement.classList.remove('is-subscribed');
+      }
+    }
+
+    function initiateCalculationOnkey(event) {
+      if (event.key === 'Enter') {
+        initiateCalculation();
+      }
+    }
+    function initiateCalculation() {
+      let cost = Number(document.querySelector('input').value);
+      cost *= 100;
+      if (cost <= 4000) {
+        cost += 1000;
+      };
+      cost /= 100;
+
+      document.querySelector('.js-element').innerText = `Your total cost will be: $${cost}`;
+      return cost;
+    }
+
+
+
+
+
+  </script>
+
+</body>
+
+</html>

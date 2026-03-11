@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Rock-paper-scissor-game</title>
+  </head>
+  <body>
+    <header>Rock Paper Scissors</header>
+    <button onclick="conclusion('Rock')">Rock</button>
+    <button onclick="conclusion('Paper')">Paper</button>
+    <button onclick="conclusion('Scissors')">Scissors</button>
+    <button
+      onclick="
+        score.wins = 0;
+        score.loses = 0;
+        score.ties = 0;
+        localStorage.removeItem('score');
+      "
+    >
+      Reset Score
+    </button>
+    <script>
+      let score = JSON.parse(localStorage.getItem("score")) || {
+        wins: 0,
+        loses: 0,
+        ties: 0,
+      };
+      //null === !score since both are falsy values
+      /*if (!score) {
+        score = {
+          wins: 0,
+          loses: 0,
+          ties: 0,
+        };
+      }*/
+
+      function pickComputerMove() {
+        let computerMove = "";
+        let randomNumber = Math.random();
+        if (randomNumber >= 0 && randomNumber < 1 / 3) {
+          computerMove = "Rock";
+        } else if (randomNumber >= 1 / 3 && randomNumber < 2 / 3) {
+          computerMove = "Paper";
+        } else if (randomNumber >= 2 / 3 && randomNumber <= 1) {
+          computerMove = "Scissors";
+        }
+        return computerMove;
+      }
+      function conclusion(userMove) {
+        let computerMove = pickComputerMove();
+        let result = "";
+        if (userMove === "Rock" && computerMove === "Rock") {
+          result = "TIE";
+        } else if (userMove === "Rock" && computerMove === "Paper") {
+          result = "YOU-LOSE";
+        } else if (userMove === "Rock" && computerMove === "Scissors") {
+          result = "YOU-WIN";
+        }
+        if (userMove === "Paper" && computerMove === "Rock") {
+          result = "YOU-WIN";
+        } else if (userMove === "Paper" && computerMove === "Paper") {
+          result = "TIE";
+        } else if (userMove === "Paper" && computerMove === "Scissors") {
+          result = "YOU-LOSE";
+        }
+        if (userMove === "Scissors" && computerMove === "Rock") {
+          result = "YOU-LOSE";
+        } else if (userMove === "Scissors" && computerMove === "Paper") {
+          result = "YOU-WIN";
+        } else if (userMove === "Scissors" && computerMove === "Scissors") {
+          result = "TIE";
+        }
+
+        if (result === "YOU-WIN") {
+          score.wins++;
+        } else if (result === "YOU-LOSE") {
+          score.loses++;
+        } else if (result === "TIE") {
+          score.ties++;
+        }
+        //since local storage only support strings we have to convert our object into an string for that we use json.stringify
+        localStorage.setItem("score", JSON.stringify(score));
+        alert(
+          `You picked ${userMove} computer picked ${computerMove} \n ${result} \n Wins : ${score.wins}  Loses: ${score.loses} Ties: ${score.ties}`,
+        );
+      }
+    </script>
+  </body>
+</html>

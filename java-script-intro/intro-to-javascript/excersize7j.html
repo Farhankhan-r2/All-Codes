@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        display: grid;
+        grid-template-columns: 60px 60px 60px 60px;
+        height: 200px;
+
+        row-gap: 2px;
+        column-gap: 2px;
+      }
+      p {
+        font-family: arial;
+        font-size: 25px;
+      }
+      button {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Calculator</p>
+    <div>
+      <button
+        onclick="
+        updateCalculation('1');
+        console.log(calculation);
+        "
+      >
+        1
+      </button>
+      <button
+        onclick="
+        updateCalculation('2');
+        console.log(calculation);
+        "
+      >
+        2
+      </button>
+      <button
+        onclick="
+        updateCalculation('3');
+        console.log(calculation);
+        "
+      >
+        3
+      </button>
+      <button
+        onclick="
+       updateCalculation('+');
+        console.log(calculation);
+        "
+      >
+        +
+      </button>
+
+      <button
+        onclick="
+       updateCalculation('4');
+        console.log(calculation);
+        "
+      >
+        4
+      </button>
+
+      <button
+        onclick="
+        updateCalculation('5');
+        console.log(calculation);
+        "
+      >
+        5
+      </button>
+      <button
+        onclick="
+        updateCalculation('6');
+        console.log(calculation);
+        "
+      >
+        6
+      </button>
+      <button
+        onclick="
+        updateCalculation('-');
+        console.log(calculation);
+        "
+      >
+        -
+      </button>
+
+      <button
+        onclick="
+        updateCalculation('7');
+        console.log(calculation);
+        "
+      >
+        7
+      </button>
+
+      <button
+        onclick="
+       updateCalculation('8');
+        console.log(calculation);
+        "
+      >
+        8
+      </button>
+
+      <button
+        onclick="
+       updateCalculation('9');
+        console.log(calculation);
+        "
+      >
+        9
+      </button>
+
+      <button
+        onclick="
+        updateCalculation('*');
+        console.log(calculation);
+        "
+      >
+        *
+      </button>
+      <button
+        onclick="
+        updateCalculation('0');
+        console.log(calculation);
+        "
+      >
+        0
+      </button>
+
+      <button
+        onclick="
+       updateCalculation('.');
+        console.log(calculation);
+        "
+      >
+        .
+      </button>
+
+      <button
+        onclick="
+        console.log(eval(calculation));
+        "
+      >
+        =
+      </button>
+      <button
+        onclick="
+        updateCalculation('1');
+        console.log(calculation);
+        "
+      >
+        /
+      </button>
+
+      <button
+        onclick="
+        calculation = '';
+        console.log('calculation is reset');
+        "
+      >
+        Reset
+      </button>
+    </div>
+    <script>
+      let calculation = "";
+      function updateCalculation(button) {
+        calculation += button;
+        return calculation;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+.slidebar {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 55px;
+  background-color: white;
+  width: 70px;
+  z-index: 200;
+  padding-top: 5px;
+}
+.slidebar-link {
+  height: 76px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.slidebar-link:hover {
+  background-color: rgb(235, 233, 233);
+  border-radius: 10px;
+}
+.slidebar-link img {
+  height: 24px;
+  margin-bottom: 4px;
+}
+.slidebar-link div {
+  font-size: 10px;
+}
+.slidebar-link {
+  position: relative;
+}
+.slidebar-link .tooltip {
+  position: absolute;
+  bottom: 0px;
+  right: -20px;
+  color: rgb(185, 182, 182);
+  font-size: 10px;
+  background-color: black;
+  padding: 2px 2px 2px 2px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(184, 182, 182);
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.slidebar-link:hover .tooltip {
+  opacity: 1;
+}

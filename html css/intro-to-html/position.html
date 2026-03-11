@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>position practice</title>
+    <style>
+      body {
+        height: 3000px;
+        padding-top: 60px;
+        padding-left: 80px;
+      }
+      .header {
+        background-color: black;
+        color: white;
+        position: fixed;
+        top: 0px;
+        right: 0px;
+        left: 0px;
+        height: 50px;
+        z-index: 100;
+      }
+      .div-1 {
+        background-color: lightblue;
+        height: 200px;
+        width: 200px;
+        position: static;
+      }
+      .div-2 {
+        background-color: lightcoral;
+        height: 200px;
+        width: 200px;
+        position: relative;
+      }
+      .slidebar {
+        background-color: green;
+        color: white;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        top: 50px;
+        width: 70px;
+      }
+      .absolute {
+        background-color: red;
+        color: white;
+        position: absolute;
+        right: 10px;
+        top: 60px;
+      }
+      .cross {
+        background-color: red;
+        color: white;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+      }
+      .timing {
+        background-color: rgb(0, 0, 0);
+        color: white;
+        position: absolute;
+        right: 0px;
+        bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">header</div>
+    <div class="slidebar">
+      slidebar
+      <div class="cross">x</div>
+    </div>
+    <div class="absolute">absolute</div>
+    <div class="div-1">div1</div>
+    <div class="div-2">
+      div2
+      <div class="timing">5:08</div>
+    </div>
+    <div class="div-1">div1</div>
+    <div class="div-2">div2</div>
+    <div class="div-1">div1</div>
+    <div class="div-2">div2</div>
+  </body>
+</html>

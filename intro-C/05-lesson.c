@@ -1,0 +1,45 @@
+#include <stdio.h>
+#include <string.h>
+int main()
+{
+  // MAD LIBS GAME
+  char noun[50] = "";
+  char verb[50] = "";
+  char adjective1[50] = "";
+  char adjective2[50] = "";
+  char adjective3[50] = "";
+
+  printf("Enter an adjective(discription): ");
+  fgets(adjective1, sizeof(adjective1), stdin);
+  adjective1[strlen(adjective1) - 1] = '\0';
+
+  printf("Enter an adjective(discription): ");
+  fgets(noun, sizeof(noun), stdin);
+  noun[strlen(noun) - 1] = '\0';
+
+  printf("Enter an adjective(discription): ");
+  fgets(adjective2, sizeof(adjective2), stdin);
+  adjective2[strlen(adjective2) - 1] = '\0';
+
+  printf("Enter an verb(ending with ing): ");
+  fgets(verb, sizeof(verb), stdin);
+  verb[strlen(verb) - 1] = '\0';
+
+  printf("Enter an adjective(discription): ");
+  fgets(adjective3, sizeof(adjective3), stdin);
+  adjective3[strlen(adjective3) - 1] = '\0';
+
+  // one intresting thing is that if i dont add\n its automatically printing it in next line this is because of input buffer created by fgets function
+  printf("%s\n", adjective1);
+  printf("%s\n", noun);
+  printf("%s\n", adjective2);
+  printf("%s\n", verb);
+  printf("%s\n", adjective3);
+
+  printf("\nToday I went to a %s zoo.\n", adjective1);
+  printf("In an exhibit, I saw a %s.\n", noun);
+  printf("%s was %s and %s!\n", noun, adjective2, verb);
+  printf("I was %s! \n ", adjective3);
+
+  return 0;
+}

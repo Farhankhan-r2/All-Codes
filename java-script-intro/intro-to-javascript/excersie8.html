@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+  <head> </head>
+  <body>
+    <script>
+      const product1 = {
+        name: "Basketball",
+        price: 2095,
+        "delivery-time": "3 days",
+      };
+      product1.price = 2595;
+      const product2 = {
+        name: "Basketball",
+        price: 2095,
+        "delivery-time": "3 days",
+      };
+      const comparedResult =
+        product1.price > product2.price ? product2 : product1;
+      console.log(comparedResult);
+      function sameProduct() {
+        if (
+          product1.name === product2.name &&
+          product1.price === product2.price
+        ) {
+          console.log("the product are same");
+        } else {
+          console.log("product are different");
+        }
+      }
+      sameProduct();
+      const anyword = "HELLOW";
+      console.log(anyword.toLowerCase());
+      console.log(anyword.repeat(3));
+    </script>
+  </body>
+</html>

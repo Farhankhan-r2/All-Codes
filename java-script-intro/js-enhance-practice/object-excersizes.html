@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <script>
+    const studentInfo = {
+      name: 'Jhon',
+      age: 16,
+      isEnrolled: true
+    }
+    console.log(`\"${studentInfo.name} is ${studentInfo.age} years old\"`);
+
+    const car = {
+      'brand': 'Toyota',
+      'model': 'fortuner',
+      ['year']: 2022
+    }
+    console.log(car.year);
+
+    const phone = {
+      brand: 'iphone',
+      price: `$${999}`
+    }
+    phone.color = 'moonlight';
+    phone.price = `$${1299}`;
+    console.log(phone);
+
+    const user = {
+      username: "Ryan",
+      isAdmin: false,
+      userEntry: function userAdmin() {
+        if (user.isAdmin) {
+          console.log("welcome Admin");
+        } else {
+          console.log("Access Denied");
+        }
+      }
+    };
+    user.userEntry();
+    const product = {
+      name: 'laptop',
+      price: 50000,
+      quantity: 2
+    };
+    const totalPrice = product.price * product.quantity;
+    console.log(totalPrice);
+
+    const setting = {
+      darkMode: true,
+      notifications: false
+    }
+    if (setting.darkMode) {
+      console.log('The theme is dark')
+    } else {
+      console.log('The theme is light');
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+p {
+  font-family: arial;
+  width: 370px;
+  text-align: center;
+  font-size: 15px;
+  line-height: 40px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 400;
+}
+.title {
+  font-size: 25px;
+  font-weight: bolder;
+}
+.link {
+  color: rgb(76, 76, 218);
+}

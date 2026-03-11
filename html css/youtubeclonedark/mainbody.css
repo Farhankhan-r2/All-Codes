@@ -1,0 +1,72 @@
+section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 20px;
+  column-gap: 10px;
+
+  margin-left: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+@media (max-width: 650px) {
+  section {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 651px) and (max-width: 999px) {
+  section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1000px) {
+  section {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.video-preview {
+  width: 100%;
+  min-width: 300px;
+  max-width: 450px;
+}
+.video-preview img {
+  width: 99%;
+  border-radius: 20px;
+}
+.upper-part {
+  position: relative;
+}
+.video-timing {
+  color: aliceblue;
+  background-color: rgb(9, 9, 9);
+  position: absolute;
+  padding: 1.5px;
+  border-radius: 2px;
+  bottom: 10px;
+  right: 15px;
+  font-size: 14px;
+}
+
+.lower-part {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  column-gap: 15px;
+  margin-top: 10px;
+}
+.lower-part img {
+  width: 100%;
+  border-radius: 20px;
+}
+.lower-part p {
+  margin-bottom: 5px;
+}
+.title {
+  font-weight: 600;
+  font-size: 15px;
+}
+.stats,
+.user-channel {
+  color: #bcb8b8;
+  font-size: 15px;
+}

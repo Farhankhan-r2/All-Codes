@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .main-container {
+        border-width: 1px;
+        border-color: rgb(216, 213, 213);
+        border-style: solid;
+        border-radius: 4px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        padding: 8px;
+        display: grid;
+        grid-template-columns: 300px;
+        row-gap: 10px;
+        width: 300px;
+      }
+      .sub-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      p {
+        font-family: arial;
+        font-weight: 500;
+        margin: 0;
+      }
+      .messeges {
+        padding: 5px 15px 5px 15px;
+        background-color: rgb(35, 130, 247);
+        color: white;
+        border: none;
+        border-radius: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <div class="sub-container">
+        <p>Home</p>
+        <p class="messeges">14</p>
+      </div>
+      <div class="sub-container">
+        <p>Notification</p>
+        <p class="messeges">3</p>
+      </div>
+      <div class="sub-container">
+        <p>Messages</p>
+        <p class="messeges">5</p>
+      </div>
+    </div>
+  </body>
+</html>

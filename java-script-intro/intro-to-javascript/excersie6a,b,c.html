@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <main>
+      <button
+        onclick="
+       if(hour>=6 && hour<=12){
+        console.log(`Hellow Good Morning ${userName} how can i help u today`);
+       }else if (hour>=12 && hour<17){
+        console.log('Hellow Good Afternoon '+ userName +'\nhow can i help u today');
+        
+       }else {
+        console.log(`Good Night ${userName}`);
+
+       }
+        
+        "
+      >
+        GREET USER
+      </button>
+    </main>
+    <script>
+      /* in this lesson i learn two things 
+        1. NEVER USE VARIABLE NAME AS name IT CONFUSES THE BROWZER THAT LED TO NOT USING UR VARIABLE
+      */
+      const hour = 8;
+      const userName = "farhan";
+    </script>
+  </body>
+</html>

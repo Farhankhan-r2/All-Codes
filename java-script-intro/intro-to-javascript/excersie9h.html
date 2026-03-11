@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <input type="text" placeholder="write anything" onkeyup="realTimeWriting(event)">
+  <p class="realTimeUpdating">
+
+  </p>
+  <script>
+
+    function realTimeWriting(event) {
+      const inputValue = document.querySelector('input').value;
+      document.querySelector('.realTimeUpdating').innerText = `${inputValue}`;
+
+    }
+  </script>
+</body>
+
+</html>

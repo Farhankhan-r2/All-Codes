@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> TO DO LIST</title>
+
+</head>
+
+<body>
+  <input class="nameInput" type="text" placeholder="enter the task">
+  <input class="dateInput" type="date">
+  <button class="add-button">Add</button>
+  <div></div>
+  <script>
+
+    const listContainer = [];
+
+
+
+    function renderTodoList() {
+      let todoListHTML = '';
+      for (let i = 0; i < listContainer.length; i++) {
+        const todoObject = listContainer[i];
+        // there is shortcut for this  const name = todoObject.name;
+        // const dueDate = todoObject.dueDate;
+        const { name, dueDate } = todoObject;
+        const html = `
+        <p>
+          ${name} ${dueDate}
+          <button onclick = "
+          listContainer.splice(${i},1);
+          renderTodoList(); 
+          ">Delete</button>
+        </p> 
+
+      `;
+        todoListHTML += html;
+      }
+
+      document.querySelector('div').innerHTML = todoListHTML;
+    }
+
+
+    document.querySelector('.add-button').onclick = () => {
+
+      const nameInputElement = document.querySelector('.nameInput');
+      const name = nameInputElement.value;
+
+      const dateInputElement = document.querySelector('.dateInput');
+      const dueDate = dateInputElement.value;
+
+
+      listContainer.push({
+        //shortcut  name: name,
+        name, dueDate
+        //dueDate: dueDate
+
+      });
+
+      nameInputElement.value = '';
+      renderTodoList();
+    }
+
+
+
+
+
+  </script>
+</body>
+
+</html>

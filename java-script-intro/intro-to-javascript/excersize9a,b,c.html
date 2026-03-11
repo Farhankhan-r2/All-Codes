@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Excersize work</title>
+</head>
+
+<body>
+  <!--
+  <button class="try-button">9a</button>
+  <button class="try-button2" onclick="document.querySelector('.try-button2').innerHTML = 'sup'">
+    9b
+  </button>
+  -->
+  <button onclick="
+  userChoice('heads')
+  " class="head-button">heads</button>
+  <button onclick="
+  userChoice('tails')
+  " class="tails-button">
+    tails
+  </button>
+  <p class="js-user-choice"></p>
+  <script>
+    /*
+    const buttonElement = document.querySelector('.try-button');
+    console.log(buttonElement);
+    */
+    function userChoice(headOrTails) {
+      document.querySelector('.js-user-choice').innerHTML = `You chose:${headOrTails}`;
+    }
+
+
+  </script>
+</body>
+
+</html>

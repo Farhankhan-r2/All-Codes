@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      font-family: arial;
+      background-color: black;
+      color: white;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .main-container {
+      display: grid;
+      grid-template-rows: 1fr 5fr;
+      row-gap: 10px;
+      position: absolute;
+      top: 30px;
+      left: 30px;
+      padding: 20px 20px;
+      background-color: rgb(40, 40, 40);
+      border: none;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .calculator-button-box {
+      display: grid;
+      /*grid-template-columns: 100px 100px 100px 100px; there is short cut*/
+      grid-template-columns: repeat(4, 50px);
+      grid-template-rows: repeat(4, 50px);
+      row-gap: 10px;
+      column-gap: 10px;
+
+
+    }
+
+    .js-button,
+    .js-equalButton,
+    .reset-button {
+      border: none;
+      border-radius: 50px;
+      background-color: rgb(178, 177, 177);
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="main-container">
+    <p class="real-time-update">5</p>
+    <div class="calculator-button-box">
+      <button class="js-button">1</button>
+      <button class="js-button">2</button>
+      <button class="js-button">3</button>
+      <button class="js-button">+</button>
+
+      <button class="js-button">4</button>
+      <button class="js-button">5</button>
+      <button class="js-button">6</button>
+      <button class="js-button">-</button>
+
+      <button class="js-button">7</button>
+      <button class="js-button">8</button>
+      <button class="js-button">9</button>
+      <button class="js-button">*</button>
+
+      <button class="js-button">0</button>
+      <button class="js-button">.</button>
+      <button class="js-equalButton">=</button>
+      <button class="js-button">/</button>
+
+      <button class="reset-button">Reset</button>
+    </div>
+  </div>
+  <p></p>
+  <script>
+    let calculation = "";
+    document.querySelectAll('.js-button').onclick = () => {
+      const value = document.querySelect('.js-button').innerText;
+      calculation += value;
+      console.log(calculation);
+    };
+    document.querySelector('.js-equalButton').onclick = () => {
+      console.log(Number(calcultion));
+
+
+    };
+  </script>
+
+</body>
+
+</html>
