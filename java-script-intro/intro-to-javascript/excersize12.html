@@ -6,13 +6,20 @@
 </head>
 
 <body>
+  <button id="start-button">Start</button>
+  <div>
+    <button id="addToCart-button">Add to cart</button>
+    <div class="container-1"></div>
+  </div>
+  </div>
+
   <script>
     //12a 
-    let add = () => {
-      console.log(2 + 3);
+    const add = () => {
+      return 2 + 3;
     };
-    add();
-    add();
+    //add();
+    //add();
 
     //12b
 
@@ -22,7 +29,46 @@
       };
 
     };
-    runTwice(() => { add() });
+    runTwice(add());
+
+    let buttonName = document.querySelector('#start-button');
+    /*12c
+    
+
+    buttonName.onclick = () => {
+      setTimeout(() => {
+        if (buttonName.innerText === "Start") { buttonName.innerText = "finished!" }
+        else {
+          buttonName.innerText = "Start"
+        }
+      }, 1000);
+    };*/
+
+    //12d
+    buttonName.addEventListener('click', () => {
+      if (buttonName.innerText === "Start") {
+        setTimeout(() => {
+          buttonName.innerText = "finished!"
+        }, 1500);
+        buttonName.innerText = "loading..";
+      } else {
+        buttonName.innerText = "Start"
+      };
+
+    });
+
+    //12e
+    buttonName = document.querySelector('#addToCart-button');
+    buttonName.onclick = () => {
+      setTimeout(() => { document.querySelector('.container-1').innerHTML = `<p></p>`; }, 2000);
+      document.querySelector('.container-1').innerHTML = `<p>Added</p>`;
+
+    }
+
+
+
+
+
   </script>
 
 </body>

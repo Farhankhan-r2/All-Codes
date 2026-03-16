@@ -31,23 +31,25 @@
     document.querySelector('.begin-button').onclick = gameBegins;
 
     let playingGame = false;
+
+
+
     function gameBegins() {
 
       if (playingGame === false) {
         playingGame = true;
-        let intervalId;
         ['<p>when I enter the throne room</p>', '<p>All the people fell silent</p>', '<p>I sat on my throne</p>', '<p>Said begin the hearing</p>', 'A knight appear while dragging a men', knightSay('Morning my lord!!')].forEach((value, index) => {
-          if (index === 5) {
-            value = knightSay('Morning my lord!!');
-            intervalId = setInterval(() => { knightSay('this man has killed one of the King\'s sacred white deer to feed his village.My lord what should we do with him.') }, 100);
-            clearInterval(intervalId);
-          }
+
           document.querySelector('.story-container').innerHTML += value;
           console.log(value);
+
+
         });
+
 
       } else if (playingGame === true) {
         playingGame = false;
+
         document.querySelector('.story-container').innerHTML = '';
       }
 
