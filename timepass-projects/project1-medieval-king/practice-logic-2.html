@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <button class="begin-button">Begin the game</button>
+  <div class="intro-container">
+
+  </div>
+
+  <div class="action-container">
+
+  </div>
+
+
+
+  <script>
+    const stats = { gold: 100, morale: 50 };
+    document.querySelector('.begin-button').onclick = gameBegins;
+
+    let playingGame = false;
+    function gameBegins() {
+
+      if (playingGame === false) {
+        playingGame = true;
+        console.log(introLoop());
+      } else if (playingGame === true) {
+        playingGame = false;
+        document.querySelector('.story-container').innerHTML = '';
+      }
+
+    };
+    function introLoop() {
+      ['<p>when I enter the throne room</p>', '<p>All the people fell silent</p>', '<p>I sat on my throne</p>', '<p>Said begin the hearing</p>', 'A knight appear while dragging a men'].forEach((index, value) => {
+        document.querySelector('.intro-container').innerHTML = `<p>${value}</p>`;
+      });
+    }
+    function conversation(knightSay, menSay, kingSay) {
+      const string1 = `<p style="font-family: monospace; white-space: pre; line-height: 1;">
+ ______________________________________________________________
+|                                                              |
+|                                    {king: ${kingSay}}        |
+|   {knight: ${knightSay}}          /                          |
+|   /                          |   O   |                       |
+|  O        {men: ${menSay}}   |  /|\\ |                       |
+| /|\\      /                  |  / \\ |                       |
+| / \\  >-+O                  ___________                      |
+|                           ---------------                    |
+|                                                              |
+|______________________________________________________________|
+</p>`;
+      return string1;
+    }
+
+  </script>
+
+</body>
+
+</html>
