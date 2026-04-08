@@ -1,12 +1,8 @@
-
 #include <stdio.h>
 void oddOrEven();
-
 int main()
 {
-
   oddOrEven();
-
   return 0;
 }
 
