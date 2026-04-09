@@ -43,9 +43,7 @@ int takeUserInput()
       userInput[strcspn(userInput, "\r\n")] = '\0';
     }
 
-    while (strcmp(userInput, "rock") != 0 && strcmp(userInput, "paper") != 0 && strcmp(userInput, "scissors") != 0)
-      ;
-  }
+  } while (strcmp(userInput, "rock") != 0 && strcmp(userInput, "paper") != 0 && strcmp(userInput, "scissors") != 0);
 
   if (strcmp(userInput, "rock") == 0)
     return 0;
@@ -99,6 +97,6 @@ int giveResult()
   }
   else
   {
-    return 01235147;
+    return 0;
   }
 }

@@ -25,23 +25,19 @@ int main()
     printf("\n");
   }*/
 
-  int rows = 0;
-  int columns = 0;
-  char symbol = '\0';
-
-  printf("Enter the number of rows: ");
-  scanf("%d", &rows);
-  printf("Enter the number of columns: ");
-  scanf("%d", &columns);
-  printf("Enter the symbol: ");
-  scanf(" %c", &rows);
-
-  for (int i = 0; i < rows; i++)
+  // print 1, 12 , 123 till 12345 came using nested loops
+  for (int i = 1; i <= 5; i++)
   {
-    for (int i = 0; i < columns; i++)
+    for (int k = 6; k > i; k--)
     {
-      printf("%c", &symbol);
-    }
-  }
+      printf(" ~_~ ");
+    };
+    for (int j = 1; j <= i; j++)
+    {
+      printf("%d", j);
+    };
+    printf("\n");
+  };
+
   return 0;
 }
