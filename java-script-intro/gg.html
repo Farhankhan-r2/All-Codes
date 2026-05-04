@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+  <script>
+    let count = -1;
+    function createCounter(n) {
+      return function () {
+        count++;
+        return n + count++;
+      };
+    }
+    const g = createCounter(9);
+    console.log(g);
+
+    const jr = createCounter(-2);
+    console.log(jr());
+    console.log(jr());
+    console.log(jr());
+    console.log(jr());
+    console.log(jr());
+
+
+
+  </script>
+</body>
+
+</html>
